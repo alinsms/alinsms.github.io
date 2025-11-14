@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4ce52048ab3ac8a07527ee12d1c10289a22d0985e3c9d1523672135da71d7b56
-size 282
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git lfs ls-files:*)",
+      "Bash(git push:*)",
+      "Bash(git lfs push:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(echo:*)",
+      "Bash(.gitattributes)",
+      "Bash(rm:*)",
+      "Bash(git lfs untrack:*)",
+      "Bash(git rm:*)",
+      "WebFetch(domain:alinsms.github.io)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(gh api:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
