@@ -16,7 +16,10 @@
       "Bash(git rm:*)",
       "WebFetch(domain:alinsms.github.io)",
       "WebFetch(domain:api.github.com)",
-      "Bash(gh api:*)"
+      "Bash(gh api:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(test.html)",
+      "Bash(git remote get-url:*)"
     ],
     "deny": [],
     "ask": []
