@@ -19,7 +19,18 @@
       "Bash(gh api:*)",
       "Bash(git ls-tree:*)",
       "Bash(test.html)",
-      "Bash(git remote get-url:*)"
+      "Bash(git remote get-url:*)",
+      "Bash(ping:*)",
+      "Bash(timeout 60 git push:*)",
+      "WebFetch(domain:www.google.com)",
+      "Bash(netsh:*)",
+      "Bash(findstr:*)",
+      "Bash(telnet:*)",
+      "Bash(curl:*)",
+      "Bash(nslookup:*)",
+      "Bash(ipconfig:*)",
+      "Bash(git config:*)",
+      "Bash(git remote set-url:*)"
     ],
     "deny": [],
     "ask": []
