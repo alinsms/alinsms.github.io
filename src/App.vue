@@ -252,7 +252,30 @@
         <div class="container">
           <h2 class="section-title">GitHub Contributions</h2>
           <div class="github-contributions">
-            <img :src="contributionGraphUrl" alt="GitHub Contribution Graph" class="contribution-graph" />
+            <div class="contribution-header">
+              <h3>{{ githubData.login || 'alinsms' }}'s Contribution Activity</h3>
+              <a :href="contributionCalendarUrl" target="_blank" class="view-full-activity">
+                <i class="fas fa-external-link-alt"></i>
+                View Full Activity on GitHub
+              </a>
+            </div>
+            <div class="contribution-graph-container">
+              <img :src="contributionGraphUrl" alt="GitHub Contribution Graph" class="contribution-graph" />
+              <div class="contribution-stats" v-if="githubData.public_repos || githubData.followers || githubData.following">
+                <div class="stat-item">
+                  <span class="stat-number">{{ githubData.public_repos || 0 }}</span>
+                  <span class="stat-label">Repositories</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ githubData.followers || 0 }}</span>
+                  <span class="stat-label">Followers</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ githubData.following || 0 }}</span>
+                  <span class="stat-label">Following</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="github-activity">
             <h3>Recent Activity</h3>
@@ -358,8 +381,14 @@ export default {
 
     const contributionGraphUrl = computed(() => {
       return githubData.value.login ?
-        `https://ghchart.rshah.org/${githubData.value.login}?${new Date().getTime()}` :
+        `https://ghchart.rshah.org/${githubData.value.login}?theme=dark` :
         ''
+    })
+
+    const contributionCalendarUrl = computed(() => {
+      return githubData.value.login ?
+        `https://github.com/${githubData.value.login}` :
+        'https://github.com/alinsms'
     })
 
     const fetchGitHubData = async () => {
@@ -606,6 +635,7 @@ export default {
       hoverName,
       mountainPeak,
       contributionGraphUrl,
+      contributionCalendarUrl,
       formatDate,
       getProjectTags,
       getActivityDescription,
