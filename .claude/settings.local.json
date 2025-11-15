@@ -32,7 +32,9 @@
       "Bash(git config:*)",
       "Bash(git remote set-url:*)",
       "Bash(timeout 30 git push:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(cp:*)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
