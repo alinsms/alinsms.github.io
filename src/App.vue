@@ -22,7 +22,7 @@
       <!-- Hero Section with Mountain Background -->
       <section class="hero hero-background">
         <div class="hero-background-image">
-          <img :src="mountainPeak" alt="Mountain Peak - Hero Background" />
+          <img :src="mountainPeak" alt="Mountain Scenery - Hero Background" />
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -323,7 +323,7 @@
 <script>
 import { ref, onMounted, computed } from 'vue'
 import axios from 'axios'
-import mountainPeak from '/img/mountain-peak.png'
+import mountainPeak from '/img/微信图片_20251114150701_12_142.jpg'
 
 export default {
   name: 'App',
