@@ -22,7 +22,7 @@
       <!-- Hero Section with Mountain Background -->
       <section class="hero hero-background">
         <div class="hero-background-image">
-          <img src="/img/mountain-peak.png" alt="Mountain Peak - Hero Background" />
+          <img :src="mountainPeak" alt="Mountain Peak - Hero Background" />
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -323,6 +323,7 @@
 <script>
 import { ref, onMounted, computed } from 'vue'
 import axios from 'axios'
+import mountainPeak from '/img/mountain-peak.png'
 
 export default {
   name: 'App',
@@ -603,6 +604,7 @@ export default {
       loading,
       contactForm,
       hoverName,
+      mountainPeak,
       contributionGraphUrl,
       formatDate,
       getProjectTags,
